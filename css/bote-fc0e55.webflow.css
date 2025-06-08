@@ -1,0 +1,982 @@
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Medium.woff') format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Bold.woff') format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Regular.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ppneuemontreal;
+  src: url('../fonts/PPNeueMontreal-Light.woff') format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Tanker;
+  src: url('../fonts/Tanker-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-RegularItalic.otf') format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-Light.otf') format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-Regular.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-BoldItalic.otf') format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url('../fonts/Aeonik-LightItalic.otf') format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ppmondwest;
+  src: url('../fonts/PPMondwest-Regular.otf') format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ppmondwest;
+  src: url('../fonts/PPMondwest-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
+}
+
+body {
+  color: #333;
+  background-color: #0000;
+  font-family: Ppneuemontreal, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-inner {
+  grid-column-gap: 7.5rem;
+  grid-row-gap: 7.5rem;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+}
+
+.hero {
+  background-image: url('../images/2025-06-08-20.18.21.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  display: flex;
+  overflow: hidden;
+}
+
+.button {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  color: #fff;
+  letter-spacing: .12px;
+  border: 1px solid #fff;
+  border-radius: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding: .875rem 2.25rem;
+  font-family: Ppmondwest, Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+}
+
+.footer {
+  color: #1e211e;
+  background-image: linear-gradient(#6bb0e2, #fff);
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14.625rem 2rem 1.5rem;
+  font-family: Ppmondwest, Arial, sans-serif;
+  display: flex;
+}
+
+.footer.black {
+  opacity: .5;
+  color: #e3e1de;
+  font-family: Ppmondwest, Arial, sans-serif;
+}
+
+.footer.white {
+  opacity: .5;
+}
+
+.footer-link {
+  color: #1e211e;
+  font-size: 1rem;
+}
+
+.footer-link.white {
+  opacity: .5;
+  color: #fff;
+}
+
+.body-black {
+  color: #e3e1de;
+}
+
+.home-hero-marquee_item {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  backface-visibility: hidden;
+  transition-property: transform opacity;
+  background-color: #0000;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+
+.btn-wrap {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.btn-wrap.hide-desk {
+  display: none;
+}
+
+.heading_text {
+  color: #0a0a0a;
+  letter-spacing: -2px;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.heading_text.white {
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 7px 5px #02020233;
+  font-family: Tanker, Arial, sans-serif;
+  font-size: 11rem;
+  font-weight: 400;
+}
+
+.social-wrap {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  color: #fff;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+.heading-wrap {
+  text-align: center;
+}
+
+.social-link {
+  color: #1e211e;
+  font-size: 1rem;
+}
+
+.social-link.black {
+  color: #0a0a0a;
+}
+
+.hide {
+  display: none;
+}
+
+.footer-text {
+  font-family: Ppneuemontreal, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.cta_arrow-wrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ar_1, .ar_2 {
+  position: absolute;
+  inset: 0%;
+}
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-text {
+  font-family: Ppneuemontreal, Arial, sans-serif;
+}
+
+.nav {
+  z-index: 9999;
+  position: relative;
+}
+
+.grid {
+  background-color: #6bb0e3;
+  min-height: 100svh;
+  padding: 5rem 2%;
+}
+
+.grid_wrapper {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: row;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  display: flex;
+}
+
+.grid_card {
+  border-radius: 32px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 684px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid_card.card_1 {
+  background-image: url('../images/2025-06-08-20.32.14.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  min-height: 616px;
+}
+
+.grid_card.card_2 {
+  background-image: url('../images/2025-06-08-20.32.20.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  min-height: 756px;
+}
+
+.grid_card.card_3 {
+  background-image: url('../images/2025-06-08-20.34.19.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 756px;
+}
+
+.grid_card.card_4 {
+  background-image: url('../images/2025-06-08-20.33.44.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 616px;
+}
+
+.grid_text-wrap {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  color: #1e211e;
+  flex-flow: column;
+  font-family: Ppmondwest, Arial, sans-serif;
+  display: flex;
+}
+
+.card_inner-flex {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  display: flex;
+}
+
+.card_inner-flex._1 {
+  min-height: 752px;
+}
+
+.card_inner-flex._2.hide-desk, .card_inner-flex.hide-desk {
+  display: none;
+}
+
+.card_heading {
+  color: #1f211e;
+  letter-spacing: -1.5px;
+  font-family: Tanker, Arial, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card_para {
+  font-family: Aeonik, Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.text_24 {
+  color: #fff;
+  letter-spacing: -.3px;
+  background-color: #0003;
+  border-radius: 20px;
+  padding: .25rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.text_section {
+  background-image: linear-gradient(#fff, #6bb0e2);
+  min-height: 88.75rem;
+}
+
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-large.cc-large {
+  max-width: 90rem;
+}
+
+.content-text {
+  color: #1e211e33;
+  text-align: center;
+  letter-spacing: -2px;
+  width: 100%;
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.about_text-wrap {
+  z-index: 1;
+  text-align: center;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60rem;
+  display: flex;
+  position: relative;
+}
+
+.about-main-wrap {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22.5rem;
+  padding-bottom: 22.5rem;
+  display: flex;
+  position: relative;
+}
+
+.padding-global {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.left-wrap {
+  grid-column-gap: 72px;
+  grid-row-gap: 72px;
+  flex-flow: column;
+  display: flex;
+}
+
+.card_para-wrap {
+  max-width: 28rem;
+}
+
+.card_para-wrap.cc-35 {
+  max-width: 35rem;
+}
+
+.card_para-wrap.cc-32 {
+  max-width: 32rem;
+}
+
+.right_wrap {
+  grid-column-gap: 72px;
+  grid-row-gap: 72px;
+  flex-flow: column;
+  display: flex;
+}
+
+.fotter-bottom {
+  justify-content: space-between;
+  width: 100%;
+  font-family: Ppneuemontreal, Arial, sans-serif;
+  display: flex;
+}
+
+.footer_text-wrap {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15.5rem;
+  display: flex;
+}
+
+.footer_heading {
+  color: #1e211e;
+  letter-spacing: -5px;
+  font-family: Tanker, Arial, sans-serif;
+  font-size: 12rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.footer_para {
+  text-align: center;
+  max-width: 25rem;
+  font-family: Ppneuemontreal, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.icon-embed-custom {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1.3125rem;
+  height: 1.25rem;
+  display: flex;
+}
+
+.nav_border {
+  background-image: linear-gradient(90deg, #25203000, #0a0a0a80 50%, #25203000);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  inset: auto auto 0%;
+}
+
+.nav_border.white {
+  background-image: linear-gradient(90deg, #fff0, #ffffff80 50%, #fff0);
+}
+
+.navigation {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  padding: 2rem;
+  display: flex;
+  position: fixed;
+  inset: 0% 0% auto;
+}
+
+.navigation-button {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  color: #e3e1de;
+  background-color: #161616;
+  border: 1px solid #fff;
+  border-radius: 6.25rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1.84375rem;
+  font-family: Ppmondwest, Arial, sans-serif;
+  font-size: 1.25rem;
+  display: flex;
+}
+
+.navigation-button.no-bg {
+  background-color: #0000;
+  padding-left: 1.53125rem;
+  padding-right: 1.53125rem;
+}
+
+.navigation-button.no-bg.hide-mobile {
+  transition: all .3s;
+}
+
+.navigation-button.no-bg.hide-mobile:hover {
+  color: #1f211e;
+  background-color: #fff;
+}
+
+.navigation-button.no-bg.hide-mobile.hide {
+  display: none;
+}
+
+.navigation-button.white {
+  color: #0a0a0a;
+  background-color: #fff;
+  transition: all .3s;
+}
+
+.navigation-button.white:hover {
+  color: #fff;
+  background-color: #1f211e;
+  border-color: #1f211e;
+}
+
+.navigation_buttons-wrapper {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.text-wrap-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-embed-2 {
+  width: 1.5rem;
+  margin-bottom: -12px;
+}
+
+.tag {
+  color: #000;
+  background-color: #ffab3e;
+  border-radius: 20px;
+  padding: .125rem 1rem .25rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.icon-embed-medium {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+}
+
+.text-block {
+  font-family: Ppneuemontreal, Arial, sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+  .button {
+    font-size: 1rem;
+  }
+
+  .heading_text.white {
+    font-size: 8rem;
+  }
+
+  .grid_wrapper {
+    flex-flow: column;
+  }
+
+  .card_inner-flex._2.hide-desk {
+    display: flex;
+  }
+
+  .card_inner-flex.hide-tablet {
+    display: none;
+  }
+
+  .card_inner-flex.hide-desk {
+    display: flex;
+  }
+
+  .text_section {
+    min-height: 50rem;
+  }
+
+  .content-text {
+    font-size: 4rem;
+  }
+
+  .about-main-wrap {
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+  }
+
+  .left-wrap {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card_para-wrap, .card_para-wrap.cc-35, .card_para-wrap.cc-32 {
+    max-width: none;
+  }
+
+  .right_wrap {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer_heading {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    font-size: .8rem;
+  }
+
+  .footer {
+    padding-top: 4rem;
+  }
+
+  .btn-wrap.hide-desk {
+    display: flex;
+  }
+
+  .heading_text.white {
+    font-size: 5rem;
+  }
+
+  .grid_card.card_1, .grid_card.card_2, .grid_card.card_3, .grid_card.card_4 {
+    width: auto;
+  }
+
+  .content-text {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .about-main-wrap {
+    padding-bottom: 10rem;
+  }
+
+  .fotter-bottom {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    flex-flow: wrap;
+  }
+
+  .footer_text-wrap {
+    padding-bottom: 5rem;
+  }
+
+  .footer_heading {
+    font-size: 5rem;
+  }
+
+  .navigation {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    flex-flow: wrap;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .navigation-button.no-bg.hide-mobile {
+    display: none;
+  }
+
+  .navigation-button.no-bg.hide-mobile.show {
+    display: flex;
+  }
+
+  .navigation-button.white {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    justify-content: center;
+    padding: .5rem 1rem;
+  }
+
+  .text-wrap-2 {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero {
+    background-position: 50%;
+    background-size: auto;
+  }
+
+  .button {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    font-size: .7rem;
+  }
+
+  .footer {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    flex-flow: column;
+  }
+
+  .heading_text.white {
+    letter-spacing: normal;
+    font-size: 3rem;
+  }
+
+  .btn-text {
+    font-size: 1rem;
+  }
+
+  .grid_card {
+    width: 100%;
+  }
+
+  .grid_card.card_1 {
+    background-position: 15%;
+  }
+
+  .grid_card.card_3 {
+    background-position: 10%;
+  }
+
+  .grid_card.card_4 {
+    background-position: 80%;
+    background-size: cover;
+  }
+
+  .card_heading {
+    font-size: 2rem;
+  }
+
+  .text_24 {
+    font-size: .75rem;
+  }
+
+  .text_section {
+    min-height: 0;
+  }
+
+  .content-text {
+    letter-spacing: normal;
+    font-size: 1.5rem;
+  }
+
+  .about_text-wrap {
+    flex-flow: wrap;
+    display: flex;
+  }
+
+  .footer_heading {
+    text-align: center;
+    letter-spacing: normal;
+    font-size: 3rem;
+  }
+
+  .footer_para {
+    font-size: 1rem;
+  }
+
+  .navigation {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    flex-flow: row;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .navigation-button {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+
+  .navigation-button.white {
+    display: flex;
+  }
+
+  .navigation_buttons-wrapper {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    flex-flow: column;
+    align-items: stretch;
+  }
+}
+
+
+@font-face {
+  font-family: 'Ppneuemontreal';
+  src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppneuemontreal';
+  src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppneuemontreal';
+  src: url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppneuemontreal';
+  src: url('../fonts/PPNeueMontreal-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tanker';
+  src: url('../fonts/Tanker-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../fonts/Aeonik-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppmondwest';
+  src: url('../fonts/PPMondwest-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ppmondwest';
+  src: url('../fonts/PPMondwest-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
